@@ -7,3 +7,4 @@ Practica curso de Git y Github [Platzi](https://platzi.com)
 * El flujo de trabajo en Github
 * Buenas prácticas
 * Trucos
+* Creado por el increible platzi team
