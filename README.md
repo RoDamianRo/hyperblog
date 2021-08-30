@@ -9,3 +9,4 @@ Practica curso de Git y Github [Platzi](https://platzi.com)
 * Trucos
 * Creado por el increible platzi team
 * Incluye ejemplos
+* Disponibles para todas las edades
