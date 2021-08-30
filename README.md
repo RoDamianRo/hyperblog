@@ -8,3 +8,4 @@ Practica curso de Git y Github [Platzi](https://platzi.com)
 * Buenas prácticas
 * Trucos
 * Creado por el increible platzi team
+* Incluye ejemplos
