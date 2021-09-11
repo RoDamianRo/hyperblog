@@ -1,0 +1,80 @@
+git status __ Ver estado del proyecto
+git commit -m "Mensaje"__ Realizar un commit con mensaje
+git rm --cached "archivo.extension"__ Saca el archivo del stage 
+git config __ Configuracion de git
+git config --list __ Ver configuracion por defecto de git
+git config --list --show __ Ver donde estan las configuraciones guardadas
+git config --global __ Configuraciones globales de git
+git config --global user.name "nombre" __ Cambiar la configuracio del nombre del usuario
+git config --global user.email "correo" __ Cambiar la configuracio del correo del usuario
+git log -> Ver la historia de un archivo
+git log --stat -> Muestra los log con los cambios de cada uno
+git show __ Muestra los cambios de un archivo
+esc -> shift + z +z __ Para salir del editor de mensaje de commit
+git diff id_1 id_2__ Compara cambios entre commits
+Estado de un archivo : untracked -> tracked(staging) -> tracked(repositorio)
+git reset idCommit --hard -> Cambia al estado en el commit indicado quitando todo lo que este en el staging
+git reset idCommit --soft -> Cambia al commit indicado pero dejadon lo que este en el staging
+git rm -> elmina un archivo del repositorio
+git rm --cached -> Elimina un archivo del commit pero lo pasa al staging
+git rm --force -> Elmina un archivo del repositorio
+git push -> Sube los cambios que se tengan en local al repositorio en la nube
+git clone -> Clona un repositorio de la nueve a local
+git pull -> Actualiza el repositorio local con los cambios que se encuentren en el de la nube
+git commit -am "Mensaje"-> hace el add y el commit sobre los cambios que hayan
+git commit --amend -> Cambiar el texto del ultimo commit
+git branch -> Muestra las ramas existente
+git branch "Nombre" -> Crear una rama
+git branch -m master main -> Cambiar el nombre de la rama principal
+git checkout -> Mueve de rama
+git remote add origin "url" -> Conectar un repositorio local con uno de la nube
+git remote add nombreFuente "url"-> Crea una nueva fuente de datos
+git remote -v -> Muestra los origenes y las acciones sobre el 
+git pull origin master --allow-unrelated-histories -> Forzar el merge entre historias no relacionadas
+git remote set-url nombreOrigen Url -> Permite cambiar la url de un repositorio
+git rebase rama -> Sobreescribe la historia de una rama
+git stash -> Almacena los cambios en memoria y regresa la rama al ultimo commit
+git stash list -> Muesta la lista de cambios guardados
+git stash pop -> Restablece los cambios almacenados
+git stash branch nombre-rama -> Coloca los cambios almacenados en una rama
+git stash drop -> Borra los cambios almacenados
+git clean --dry-run -> Simula lo que se vaya a borrar
+git clean -f -> Borra los archivo que no se hayan trackeado
+git cherry-pick -> Traer un commit antiguo a head
+git reflog -> Muestra toda la historia
+git reset HEAD@{4} -> Restablece los cambios al head indicado
+git reset --hard hash -> Elimina completamete los cambio hasta el commit indicado
+git checkout -b nombre-rama hash -> Restablecer una rama 
+git grep palabra -> Busca en que archivo se encuentra la palabra indicada
+git grep -n color -> Busca en que archivo se encuentra la palabra indicada mostrando la linea en la que se encuentra
+git grep -c color -> Contar las veces que se usa la palabra
+git log -S cabecera -> Muesta las veces que uso la palabra en los commits
+git shortlog -> Muestra que commit ha hecho cada miembro del equipo
+git shortlog -sn --all --no-merges
+git blame index.html -L35,59 -c -> Muestra quien a hecho algo en un archivo
+git branch -r -> Ver ramas remotas
+git branch -a -> Ver todas las ramas
+
+----------------------------------------
+Generar una llave ssh
+ssh-keygen -t rsa -b 4096 -C "youremail@example.com"
+Comprobar que el servidor de llaves esten disponibles
+eval $(ssh-agent - s)
+Agregar la llave ssh al servidor de llaves
+ssh-add ~/.ssh/id_rsa
+------------------------------------------
+Cambiar la dirección del repositorio al cual se conecta el local
+git remote set-url origin push url
+------------------------------------------
+Alias
+git log --all --graph --decorate --oneline
+alias nombre="git log --all --graph --decorate --oneline"
+------------------------------------------
+Tags
+git tag -a v0.1 -m "Resultado de las primeras clases del curso" cb092ad -> Crear un tag
+git show-ref --tags -> Mostrar los tags que existen
+git tag -d tag-malo -> Elminar tag
+git push origin :refs/tags/tag-malo -> Elminar tag eliminado en local en la nube
+------------------------------------------
+git show-branch --all -> Mostrar todas las ramas
+gitk
